@@ -1,0 +1,250 @@
+*, ::before, ::after, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Design of the site background image for the desktop version */
+body {
+  background-color: #674baf;
+  background-image: url(images/bg-desktop.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+/* Design for the header composed of a logo  */
+.logo_website {
+  width: 200px;
+  margin: 35px 0px 35px 85px;
+}
+
+/* placement of the main section with the mockup, titles, text and button  */
+.website_presentation {
+  display: flex;
+  margin: 10px 85px 5px;
+}
+
+/* placement for the mockup only*/
+.mock_desktop {
+  width: 650px;
+  height: 400px;
+}
+
+/* placement of all the elements of the main section except the mockup  */
+.principal_section {
+  margin-left: 55px;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+}
+
+h2:nth-child(1) {
+  margin: 35px 0px 7px 0px;
+}
+
+h2:nth-child(2) {
+  margin-bottom: 15px;
+}
+
+.presentation_paragraphe {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  margin-right: 100px;
+  margin-bottom: 25px;
+}
+
+button {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  width: 200px;
+  padding: 15px 15px;
+  border-radius: 99990px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: white;
+  color: #BF9CFF;
+  margin-bottom: 40px;
+  /*  preparation of the animation when hovering over the button  */
+}
+button:hover {
+  transition: color ease-in-out;
+  color: white;
+  transition: background-color ease-in-out;
+  background-color: #e882e8;
+}
+
+/* placement of the box of the social medias icons */
+.social_media {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 80px;
+}
+
+/* placement of every social media icon */
+.social_media_icons {
+  display: flex;
+  justify-content: space-between;
+  width: 8%;
+  margin-right: 90px;
+}
+
+.fa-brands {
+  border: 1px solid white;
+  border-radius: 999990px;
+  padding: 15px;
+  margin-right: 15px;
+  color: white;
+  cursor: pointer;
+  /*  preparation of the animation when hovering over the icons  */
+}
+.fa-brands:hover {
+  transition: border ease-in-out;
+  border: 1px solid #e882e8;
+  transition: background-color ease-in-out;
+  background-color: #674baf;
+  transition: color ease-in-out;
+  color: #e882e8;
+}
+
+/* The website footer  */
+.attribution {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  color: white;
+  margin: 15px 0px 10px 0px;
+}
+
+/* Import of the rules for the responsive design */
+/* Reduction of the seize of the margin next to the paragraph to keep the design as long as possible  */
+@media screen and (max-width: 1250px) {
+  .presentation_paragraphe {
+    margin-right: 0px;
+  }
+}
+/* Reduction of the size of all the elements because the screen is reduced in width */
+@media screen and (max-width: 1145px) {
+  .logo_website {
+    margin: 15px 0px 15px 20px;
+    width: 150px;
+  }
+
+  .website_presentation {
+    margin: 10px 20px 5px;
+  }
+
+  .mock_desktop {
+    width: 450px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h2:nth-child(1) {
+    margin: 20px 0px 5px 0px;
+  }
+
+  h2:nth-child(2) {
+    margin-bottom: 13px;
+  }
+
+  .presentation_paragraphe {
+    margin-right: 80px;
+  }
+
+  button {
+    width: 170px;
+  }
+}
+/* Reduction of the size of all the elements because the screen is reduced in width */
+@media screen and (max-width: 950px) {
+  .principal_section {
+    margin-left: 25px;
+  }
+
+  button {
+    width: 150px;
+  }
+
+  .presentation_paragraphe {
+    margin-right: 20px;
+  }
+}
+/* Reduction of the mockup because the screen is reduced in width */
+@media screen and (max-width: 800px) {
+  .mock_desktop {
+    width: 280px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .principal_section {
+    margin-left: 15px;
+  }
+}
+@media screen and (max-width: 635px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+/* changement of the website direction from row to column for the mobbile version
+  and changement with the new background image adapated for the mobile version
+  center of all the elements and keep some margin on the sides */
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .website_presentation {
+    flex-direction: column;
+  }
+
+  .mock_desktop {
+    margin: 0 auto 85px auto;
+    width: 100%;
+  }
+
+  h2, p {
+    text-align: center;
+  }
+
+  button {
+    display: block;
+    width: 250px;
+    margin: 35px auto 70px auto;
+  }
+
+  .social_media {
+    margin-right: calc(42% + 1vw);
+  }
+
+  .principal_section {
+    margin-left: 0px;
+  }
+
+  .presentation_paragraphe {
+    margin-right: 0px;
+  }
+
+  .logo_website {
+    margin: 30px 0px 50px 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

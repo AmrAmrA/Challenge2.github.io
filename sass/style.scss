@@ -1,0 +1,69 @@
+@import '__Variables';
+@import '__basicReset';
+@import '__mixins'; 
+
+/* Design of the site background image for the desktop version */
+body {
+   @include BackgroundImageDesktop; 
+}
+/* Design for the header composed of a logo  */
+.logo_website {
+    width: 200px;
+    margin: 35px 0px 35px 85px;
+}
+/* placement of the main section with the mockup, titles, text and button  */
+.website_presentation {
+    display: flex;
+    margin: 10px 85px 5px;
+}
+/* placement for the mockup only*/
+.mock_desktop {
+    width: 650px;
+    height: 400px;
+}
+/* placement of all the elements of the main section except the mockup  */
+.principal_section {
+    margin-left: 55px;
+}
+h2 {
+ @include StyleTitle; 
+}
+h2:nth-child(1){
+    margin: 35px 0px 7px 0px; 
+}
+h2:nth-child(2){
+    margin-bottom: 15px; 
+}
+.presentation_paragraphe {
+    @include StyleParagraphe; 
+}
+button {
+    @include StyleButton; 
+    /*  preparation of the animation when hovering over the button  */
+    &:hover {
+    @include ButtonAnimation;
+    }
+}
+
+/* placement of the box of the social medias icons */
+.social_media {
+    @include iconsBox; 
+}
+/* placement of every social media icon */
+.social_media_icons {
+    @include individualIcons;  
+}
+.fa-brands {
+        @include StyleIcons; 
+        /*  preparation of the animation when hovering over the icons  */
+    &:hover {
+        @include IconsAnimation; 
+    }
+}
+/* The website footer  */
+.attribution {
+    @include StyleFooter; 
+}
+
+/* Import of the rules for the responsive design */
+@import '__breakpoints';
